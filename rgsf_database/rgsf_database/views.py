@@ -7,4 +7,5 @@ from .models import Employee
 
 class EmplyeeViewSet(viewsets.ModelViewSet):
     queryset = Employee.objects.all().order_by('email')
+    filter_fields = ('restaurant',)
     serializer_class = EmployeeSerializer
