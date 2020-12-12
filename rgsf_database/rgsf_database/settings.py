@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rgsf_database'
+    'rgsf_database',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -51,6 +52,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'rgsf_database.urls'
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+}
 
 TEMPLATES = [
     {
